@@ -1,28 +1,29 @@
 body{
-  margin-top:60px;
-  background-color: #5f42f4;
+	margin-top: 60px;
+	background-color: #000;
 }
 .navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
+	overflow: hidden;
+	background-color: #1B2A41;
+	position: fixed;
+	padding: 0px 0px;
+	top: 0;
+	left: 0;
+	width: 100%;
 }
 
 .navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+	float: left;
+	display: block;
+	color: #AFAFAF;
+	text-align: left;
+	padding: 16px 16px;
+	text-decoration: none;
+	font-size: 17px;
 }
 
 .main {
-  padding: 16px;
-  margin-top: 30px;
-  height: 1500px; /* Used in this example to enable scrolling */
+	text-align: center;
+	padding: 0px 16px;
 }
 

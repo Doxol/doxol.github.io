@@ -1,0 +1,38 @@
+//alice
+while not buying
+	check bobs flags
+	if bobs flags > alice flags by 2
+		buy bobs color
+	else if alice flags > bobs flags by 2
+		buy alices color
+	increment num of flags of pref color
+//bob
+while not buying
+	check alices flags
+	if bobs flags > alice flags by 2
+		buy bobs color
+	else if alice flags > bobs flags by 2
+		buy alices color
+	if bobs flags >= 6
+		bobs flags = 0
+	increment num of flags of pref color
+
+
+
+//both
+check others color
+if other has 10+ flags
+	buy their color
+else put up color
+check others color
+if other has 10+ flags && bob
+	buy their color
+
+while true
+	check others color
+	if yes break
+	else put up flag
+	check others color
+	if number of flags > 10 && (!other has flag || alice)
+		buy your color		
+choose color which is alphabetically first qed
