@@ -15,7 +15,7 @@ body{
 .navbar a {
 	float: left;
 	display: block;
-	color: #AFAFAF;
+	color: #a0a0d0;
 	text-align: left;
 	padding: 16px 16px;
 	text-decoration: none;
@@ -25,5 +25,11 @@ body{
 .main {
 	text-align: center;
 	padding: 0px 16px;
+}
+
+.mainh1 {
+	text-align: center;
+	padding: 0px 16px;
+	color:#125E8A;	
 }
 
