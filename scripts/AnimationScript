@@ -1,4 +1,4 @@
-var canvas = document.querySelector('.myCanvas');
+var canvas = document.getElementById('myCanvas');
 var width = canvas.width = window.innerWidth;
 var height = canvas.height = window.innerHeight;
 var ctx = canvas.getContext('2d');
@@ -9,7 +9,7 @@ var oldY = random(-50, 50);
 var xDir = random(-1, 1);
 var yDir = random(-1, 1);
 
-requestAnimationFrame(animateBall);
+requestAnimationFrame(animateBall());
 
 function animateBall(){
   if (((oldX + xDir + 5) > width) || ((oldX + xDir - 5) < 0))
@@ -26,7 +26,7 @@ function animateBall(){
   oldY += yDir;
   ctx.arc(oldX, oldY, 5, 0, Math.PI * 2, true);
   ctx.fill();
-  requestAnimationFrame(animateBall);
+  requestAnimationFrame(animateBall());
 }
 
 function random(min,max) {
