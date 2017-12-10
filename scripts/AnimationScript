@@ -6,8 +6,8 @@ var ctx = canvas.getContext("2d");
 var oldX = random(-50, 50);
 var oldY = random(-50, 50);
 
-var xDir = random(-1, 1);
-var yDir = random(-1, 1);
+var xDir = 1;
+var yDir = 1;
 
 requestAnimationFrame(animateBall());
 
