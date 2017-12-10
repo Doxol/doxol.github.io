@@ -15,7 +15,7 @@ function animateBall(){
   if (((oldX + xDir + 5) > width) || ((oldX + xDir - 5) < 0))
     xDir = -xDir;
   if (((oldY + yDir + 5) > height) || ((oldY + yDir - 5) < 0))
-    yDir = -yDir
+    yDir = -yDir;
   ctx.beginPath();
   ctx.fillStyle = 'rgb(' + 0 + ', ' + 0 + ', ' + 0 + ')';
   ctx.arc(oldX, oldY, 5, 0, Math.PI * 2, true);
