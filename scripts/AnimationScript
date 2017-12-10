@@ -1,0 +1,35 @@
+var canvas = document.querySelector('.myCanvas');
+var width = canvas.width = window.innerWidth;
+var height = canvas.height = window.innerHeight;
+var ctx = canvas.getContext('2d');
+
+var oldX = random(-50, 50);
+var oldY = random(-50, 50);
+
+var xDir = random(-1, 1);
+var yDir = random(-1, 1);
+
+requestAnimationFrame(animateBall);
+
+function animateBall(){
+  if (((oldX + xDir + 5) > width) || ((oldX + xDir - 5) < 0))
+    xDir = -xDir;
+  if (((oldY + yDir + 5) > height) || ((oldY + yDir - 5) < 0))
+    yDir = -yDir
+  c.beginPath();
+  c.fillStyle = 'rgb(' + 0 + ', ' + 0 + ', ' + 0 + ')';
+  c.arc(oldX, oldY, 5, 0, Math.PI * 2, true);
+  c.fill();
+  c.beginPath();
+  c.fillStyle = 'rgb(' + 255 + ', ' + 0 + ', ' + 0 + ')';
+  oldX += xDir;
+  oldY += yDir;
+  c.arc(oldX, oldY, 5, 0, Math.PI * 2, true);
+  c.fill();
+  requestAnimationFrame(animateBall);
+}
+
+function random(min,max) {
+  var num = Math.floor(Math.random()*(max-min)) + min;
+  return num;
+}
