@@ -18,13 +18,13 @@ function animateBall(){
     yDir = -yDir;
   ctx.beginPath();
   ctx.fillStyle = 'rgb(' + 0 + ', ' + 0 + ', ' + 0 + ')';
-  ctx.arc(oldX, oldY, 5, 0, Math.PI * 2, true);
+  ctx.arc(oldX, oldY, 5, 0, Math.PI * 2);
   ctx.fill();
   ctx.beginPath();
   ctx.fillStyle = 'rgb(' + 255 + ', ' + 0 + ', ' + 0 + ')';
   oldX += xDir;
   oldY += yDir;
-  ctx.arc(oldX, oldY, 5, 0, Math.PI * 2, true);
+  ctx.arc(oldX, oldY, 5, 0, Math.PI * 2);
   ctx.fill();
   requestAnimationFrame(animateBall());
 }
