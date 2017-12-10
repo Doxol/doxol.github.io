@@ -1,7 +1,7 @@
-var canvas = document.getElementById('myCanvas');
+var canvas = document.getElementById("myCanvas");
 var width = canvas.width = window.innerWidth;
 var height = canvas.height = window.innerHeight;
-var ctx = canvas.getContext('2d');
+var ctx = canvas.getContext("2d");
 
 var oldX = random(-50, 50);
 var oldY = random(-50, 50);
