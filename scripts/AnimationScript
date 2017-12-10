@@ -16,16 +16,16 @@ function animateBall(){
     xDir = -xDir;
   if (((oldY + yDir + 5) > height) || ((oldY + yDir - 5) < 0))
     yDir = -yDir
-  c.beginPath();
-  c.fillStyle = 'rgb(' + 0 + ', ' + 0 + ', ' + 0 + ')';
-  c.arc(oldX, oldY, 5, 0, Math.PI * 2, true);
-  c.fill();
-  c.beginPath();
-  c.fillStyle = 'rgb(' + 255 + ', ' + 0 + ', ' + 0 + ')';
+  ctx.beginPath();
+  ctx.fillStyle = 'rgb(' + 0 + ', ' + 0 + ', ' + 0 + ')';
+  ctx.arc(oldX, oldY, 5, 0, Math.PI * 2, true);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.fillStyle = 'rgb(' + 255 + ', ' + 0 + ', ' + 0 + ')';
   oldX += xDir;
   oldY += yDir;
-  c.arc(oldX, oldY, 5, 0, Math.PI * 2, true);
-  c.fill();
+  ctx.arc(oldX, oldY, 5, 0, Math.PI * 2, true);
+  ctx.fill();
   requestAnimationFrame(animateBall);
 }
 
