@@ -1,0 +1,14 @@
+html, body {
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background: black;
+}
+
+input {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
