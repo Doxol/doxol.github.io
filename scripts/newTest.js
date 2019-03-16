@@ -1,3 +1,6 @@
+// credit to https://codepen.io/doms/pen/BZLezr
+// I am using this as a basis for what I want to do
+
 let particles = [];
 
 // this function is to set up the overall canvas
