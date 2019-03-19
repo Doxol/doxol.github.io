@@ -14,41 +14,34 @@
 
 class Particle {
 	constructor() {
-		this.x = 0;
+		this.x = Math.random() * innerWidth;
 		this.y = 0;
-		this.speed = 1;
-		this.width = 30;
-		this.font = this.width + "px monospace"
+		this.speed = (Math.random() * 1.2) + 1.0;
+		//this.width = 30;
+		//this.width = (Math.random() * 20) + 10; //using different sized fonts seems to affect performance by a lot
+		ctx.font = "30px monospace"
 		this.residue = [];
 		this.timer = 0;
 		this.reset();
 	}
 
 	reset() {
-		this.x = Math.random() * innerWidth;
-		this.y = (Math.random() * 10) + 10;
-		this.width = (Math.random() * 20) + 10;
-		this.font = this.width + "px monospace"
+		this.y = 10;
 		this.timer = 0;
 
-		this.speed = (Math.random() * 1.2) + 1.0;
 	}
 
 
 	draw() {
 
-		var gradient = ctx.createLinearGradient(this.x, this.y - (this.width * 4), this.x, this.y);
+		var gradient = ctx.createLinearGradient(this.x, this.y - (120), this.x, this.y);
 		gradient.addColorStop("0", "black");
 		gradient.addColorStop("1.0", "lime");
-		ctx.font = this.font;
 		ctx.fillStyle = gradient;
 		if (this.timer == 0){
 			for (let k = 0; k < 4; k++){
 				let char = String.fromCharCode(Math.floor((Math.random() * 109) + 33));
-				this.residue.push(char);
-			}
-			for (let k = 0; k < 3; k++){
-				this.residue.shift();
+				this.residue.unshift(char);
 			}
 			if (this.residue.length > 4){
 				this.residue.length = 4;
@@ -57,16 +50,16 @@ class Particle {
 
 		for (let j = 0; j < this.residue.length; j++){
 			if ((this.residue.length - 1 - j) >= 0){
-				ctx.fillText(this.residue[this.residue.length - 1 - j], this.x, this.y - (this.width * j));
+				ctx.fillText(this.residue[this.residue.length - 1 - j], this.x, this.y - (30 * j));
 			}
 		}
 
 		this.timer++;
 
-		if ((this.speed * this.timer) >= (this.width/15)){
+		if ((this.speed * this.timer) >= (2)){
 			this.timer = 0;
 		}
-		if (this.y > (innerHeight + this.width)) {
+		if (this.y > (innerHeight + 120)) {
 			this.reset();
 		}
 
@@ -89,7 +82,7 @@ function draw() {
 
 	ctx.clearRect(0,0,innerWidth, innerHeight);
 
-	if (particles.length < 120) {
+	if (particles.length < 60) {
 		particles.push(new Particle());
 	}
 
