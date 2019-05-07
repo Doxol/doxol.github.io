@@ -1,3 +1,2 @@
 # doxol.github.io
-The greatest web page
-
+Personal website that is currently in progress.
